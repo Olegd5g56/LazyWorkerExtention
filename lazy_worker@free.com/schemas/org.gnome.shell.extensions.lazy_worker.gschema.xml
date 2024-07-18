@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="my-indicator-extension">
+  <schema id="org.gnome.shell.extensions.lazy_worker" path="/org/gnome/shell/extensions/lazy_worker/">
+    <key name="work-hours-begin" type="i">
+      <default>9</default>
+      <summary>Work hours start</summary>
+      <description>Hour of the day when work starts (0-23)</description>
+    </key>
+    <key name="work-hours-end" type="i">
+      <default>17</default>
+      <summary>Work hours end</summary>
+      <description>Hour of the day when work ends (0-23)</description>
+    </key>
+    <key name="work-minutes-begin" type="i">
+      <default>0</default>
+      <summary>Work minuts start</summary>
+      <description>Minut of the day when work starts (0-59)</description>
+    </key>
+    <key name="work-minutes-end" type="i">
+      <default>0</default>
+      <summary>Work minuts end</summary>
+      <description>Minut of the day when work ends (0-59)</description>
+    </key>
+  </schema>
+</schemalist>
+

@@ -1,0 +1,10 @@
+{
+  "name": "Lazy worker",
+  "description": "Extension the display of working day percentages",
+  "uuid": "lazy_worker@free.com",
+  "shell-version": [
+    "43","44","45","46"
+  ],
+  "settings-schema": "org.gnome.shell.extensions.lazy_worker",
+  "version": 1
+}

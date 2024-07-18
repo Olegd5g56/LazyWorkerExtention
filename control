@@ -1,0 +1,10 @@
+Package: gnome-shell-extension-lazy-worker
+Version:
+Section: gnome
+Priority: optional
+Depends: gnome-shell
+Architecture: all
+Essential: no
+Installed-Size: 0
+Maintainer: oleg
+Description: GNOME Shell Extension the display of working day percentages
