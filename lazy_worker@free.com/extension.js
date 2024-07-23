@@ -1,6 +1,6 @@
 const GETTEXT_DOMAIN = 'lazy_worker-extension';
 
-const { GObject, St, Clutter, GLib } = imports.gi;;
+const { GObject, St, Clutter, GLib } = imports.gi;
 
 const ExtensionUtils = imports.misc.extensionUtils;
 const Main = imports.ui.main;
@@ -17,7 +17,6 @@ class Indicator extends PanelMenu.Button {
         super._init(0.0, _('Working day Indicator'));
 
         label = new St.Label({
-            text: "lol",
             y_align: Clutter.ActorAlign.CENTER,
         })
         this.add_child(label);
@@ -32,7 +31,6 @@ class Indicator extends PanelMenu.Button {
 class Extension {
     constructor(uuid) {
         this._uuid = uuid;
-        this._settings = ExtensionUtils.getSettings('org.gnome.shell.extensions.lazy_worker');
         ExtensionUtils.initTranslations(GETTEXT_DOMAIN);
     }
 
@@ -55,6 +53,7 @@ class Extension {
     }
 
     enable() {
+        this._settings = ExtensionUtils.getSettings('org.gnome.shell.extensions.lazy_worker');
         this._indicator = new Indicator();
         Main.panel.addToStatusArea(this._uuid, this._indicator);
 
@@ -89,6 +88,15 @@ class Extension {
         if (this._indicator) {
             this._indicator.destroy();
             this._indicator = null;
+        }
+        
+        if (this._settings) {
+            this._settings = null;
+        }
+        
+        if(label){
+            label.destroy();
+            label=null;
         }
     }
 }
